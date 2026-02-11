@@ -53,4 +53,11 @@ $(document).ready(function() {
     $('.color-selection .form-check label').on('mouseover mouseleave', function(e) {
         e.type === 'mouseover' ? $('h1.greeting').addClass(e.target.getAttribute('for')) : $('h1.greeting').removeClass(e.target.getAttribute('for'));
     });
+
+    // Requirement: Display a toast on clicking 'Submit' if there are selected balloons
+    $('#submit').click(function(e) {
+        if ($('.color-selection .form-check input').toArray().filter(checkbox => $(checkbox).prop('checked') == true).length == 0) {
+            bootstrap.Toast.getOrCreateInstance(document.getElementById('liveToast')).show();
+        }
+    });
 });
