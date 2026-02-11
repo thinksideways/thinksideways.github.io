@@ -1,5 +1,22 @@
 $(document).ready(function() {
-    console.log("balloons javascript loaded");
+    // Requirement: Randomize attention seeker on Happy Birthday greeting
+    let attentionSeekers = [
+        'bounce',
+        'flash',
+        'pulse',
+        'rubberBand',
+        'shakeX',
+        'shakeY',
+        'headShake',
+        'swing',
+        'tada',
+        'wobble',
+        'jello',
+        'heartBeat'
+    ]
+
+    $('h1.greeting').addClass('animated animate__animated animate__' + attentionSeekers[Math.floor(Math.random() * attentionSeekers.length)])
+
     const elem = document.getElementById('dob');
     const datepicker = new Datepicker(elem, {
         // options
@@ -20,7 +37,7 @@ $(document).ready(function() {
         }
     });
 
-    // Handle selecting or deselecting all balloons while maintaining animations from our 'change' event
+    // Requirement: Select/deselect all balloon colors with a button
     $('#balloon-btn').click(function(e) {
         e.preventDefault();
         let checkboxes = $('.color-selection .form-check input').toArray();
@@ -32,7 +49,7 @@ $(document).ready(function() {
         $('.color-selection .form-check input').toArray().forEach(checkbox => $(checkbox).prop('checked') != checkState ? $(checkbox).trigger('click') : null);
     });
 
-    // Change birthday greeting color on hover and revert on leave
+    // Requirement: Change birthday greeting color on hover and revert on leave
     $('.color-selection .form-check label').on('mouseover mouseleave', function(e) {
         e.type === 'mouseover' ? $('h1.greeting').addClass(e.target.getAttribute('for')) : $('h1.greeting').removeClass(e.target.getAttribute('for'));
     });
