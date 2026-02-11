@@ -32,7 +32,7 @@
                         <label for="dob">Birthday</label>
                     </div>
                     <div class="card mt-4">
-                        <div class="card-body" id="checkbox-card">
+                        <div class="card-body color-selection" id="checkbox-card">
                             <h5 class="card-title">Select your favorite balloons</h5>
                             <div class="form-check">
                                 <input type="checkbox" class="form-check-input" id="red">
@@ -46,6 +46,7 @@
                                 <input type="checkbox" class="form-check-input" id="blue">
                                 <label class="form-check-label" for="blue">Blue balloons</label>
                             </div>
+                            <button type="button" class="btn btn-outline-primary mt-3" id="balloon-btn">Select/Deselect All Balloons</button>
                         </div>
                     </div>
                     <button type="button" class="btn btn-outline-primary mt-3" id="submit">Submit</button>
@@ -61,6 +62,15 @@
     <style>
         .ball {
             visibility: hidden;
+        }
+        .red {
+            color: red;
+        }
+        .blue {
+            color: blue;
+        }
+        .green {
+            color: green;
         }
     </style>
 </body>

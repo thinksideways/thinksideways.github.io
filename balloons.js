@@ -19,4 +19,21 @@ $(document).ready(function() {
             e.target.checked ? elem.classList.add("animate__animated", "animate__bounceInDown") : elem.classList.add("animate__animated", "animate__bounceOutUp");
         }
     });
+
+    // Handle selecting or deselecting all balloons while maintaining animations from our 'change' event
+    $('#balloon-btn').click(function(e) {
+        e.preventDefault();
+        let checkboxes = $('.color-selection .form-check input').toArray();
+
+        let checkedBoxes = checkboxes.filter(checkbox => $(checkbox).prop('checked') == true);
+
+        // check state swap: if some or none are checked select all, if all are selected deselect all
+        let checkState = checkedBoxes.length >= 0 && checkedBoxes.length < checkboxes.length;
+        $('.color-selection .form-check input').toArray().forEach(checkbox => $(checkbox).prop('checked') != checkState ? $(checkbox).trigger('click') : null);
+    });
+
+    // Change birthday greeting color on hover and revert on leave
+    $('.color-selection .form-check label').on('mouseover mouseleave', function(e) {
+        e.type === 'mouseover' ? $('h1.greeting').addClass(e.target.getAttribute('for')) : $('h1.greeting').removeClass(e.target.getAttribute('for'));
+    });
 });
