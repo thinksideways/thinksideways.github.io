@@ -1,139 +1,743 @@
 <!DOCTYPE html>
-<html data-bs-theme="dark">
+<html data-bs-theme="dark" lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Northwind Traders</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>GitHub: thinksideways | Portfolio</title>
+        <!-- Bootstrap 5.3.8 CSS -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <!-- Fonts: Roboto & Fira Code for Terminal -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wdth,wght@0,87.5,100..900;1,87.5,100..900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Roboto:ital,wdth,wght@0,87.5,100..900;1,87.5,100..900&display=swap" rel="stylesheet">
+        <!-- Bootstrap Icons -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+        <!-- jQuery 4.0.0 -->
         <script src="https://code.jquery.com/jquery-4.0.0.min.js" integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous"></script>
-        <script src="discount.js"></script>
-    </head>
-    <body class="roboto-text">
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#"><i class="bi bi-compass"></i> Northwind Traders</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                           <i class="bi bi-database"></i> Products
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#"><i class="bi bi-book"></i> Browse Categories</a></li>
-                            <li><a class="dropdown-item" href="#"><i class="bi bi-search"></i> Product Search</a></li>
-                            <li><a class="dropdown-item" href="#"><i class="bi bi-cash-coin"></i> Current Discounts</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="bi bi-person"></i> Customers
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#"><i class="bi bi-person-vcard"></i> Sign In</a></li>
-                            <li><a class="dropdown-item" href="#"><i class="bi bi-key"></i> Register</a></li>
-                        </ul>
-                    </li>
-                </ul>
-                <a class="nav-link nav-item me-md-3 mb-2 mb-md-0 text-body-secondary" href="#"><i class="bi bi-cart"></i> Cart</a>
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-                    <button class="btn btn-outline-success" type="submit"><i class="bi bi-search"></i></button>
-                </form>
-                </div>
-            </div>
-        </nav>
-        <main>
-            <div class="container-fluid">
-                <div class="row mb-2">
-                    <div class="col-md-12 col-sm-12">
-                        <div class="p-4 m-2 mt-4 rounded-1 border border-secondary-subtle h-100">
-                            <h1>Northwind Traders</h1>
-                            <p>
-                            We have the worst prices and selection of low quality foods &amp;
-                            processed beverages on the planet! Check out our featured opposite-day discounts!
-                            </p>
-                            <p>
-                            For the least exceptional international cuisine, look no further.  For the best look much farther.
-                            </p>
-                            <hr class="my-4">
-                            <a class="btn btn btn-outline-success btn-lg" href="#" role="button"><i class="bi bi-bag"></i> Order Now</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="row mb-2">
-                    <div class="col-md-4 col-sm-12">
-                        <div class="p-4 m-2 mt-4 rounded-1 border border-secondary-subtle h-100">
-                            <h3>Tis the seasoning</h3>
-                            <div class="mb-4">
-                            Order today! Pay 12.5% over market on Chef Anton's Italian Seasoning!
-                            You don't want to make Chef Anton mad, do you (he'll come at you in your sleep)?
-                            </div>
-                            <i>Discount expires: 2/25/2027</i><br />
-                            <a class="discount-toast" data-product="Chef Anton's Italian Seasoning" data-discountcode="1234" data-discounttitle="12.5% Over" href="#">Discount Code</a>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-12">
-                        <div class="p-4 m-2 mt-4 rounded-1 border border-secondary-subtle h-100">
-                            <h3>For the roasters</h3>
-                            <div class="mb-4">
-                            Order today! Pay 22.5% over market on Barista Bill's Italian Roast!
-                            You don't want to make Barista Bill mad, do you (he'll come at you in your sleep too)?
-                            </div>
-                            <i>Discount expires: 2/25/2027</i><br />
-                            <a class="discount-toast" data-product="Barista Bill's Italian Roast" data-discountcode="1235" data-discounttitle="22.5% Over" href="#">Discount Code</a>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-12">
-                        <div class="p-4 m-2 mt-4 rounded-1 border border-secondary-subtle h-100">
-                            <h3>It's 5 o'clock somewhere!</h3>
-                            <div class="mb-4">
-                            Order today! Pay 42.5% over market on Brewery Barry's IPA!
-                            You don't want to make Brewery Barry mad, do you (he'll come at you in your sleep too and he's ragefully drunk)?
-                            </div>
-                            <i>Discount expires: 2/25/2027</i><br />
-                            <a class="discount-toast" data-product="Brewery Barry's IPA" data-discountcode="1236" data-discounttitle="42.5% Over" href="#">Discount Code</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </main>
-        <div class="container">
-            <div class="toast-container position-fixed bottom-0 end-0 p-3">
-                <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-bs-autohide="false">
-                    <div class="toast-header">
-                        <strong class="me-auto"></strong>
-                        <small class="text-body-secondary"></small>
-                        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
-                    </div>
-                    <div class="toast-body">
-                        
-                    </div>
-                </div>
-            </div>
-            <footer class="py-3 my-4">
-                <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-                    <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Careers</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Products</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Categories</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Sign In</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Register</a></li>
-                </ul>
-                <p class="text-center text-body-secondary">&copy; 2026 Northwind Traders</p>
-            </footer>
-        </div>
+        
         <style>
-            .roboto-text {
+            :root {
+                --accent-color: #0dfdff;
+                --accent-purple: #9d4edd;
+                --bg-glass: rgba(18, 20, 24, 0.65);
+                --border-glass: rgba(255, 255, 255, 0.08);
+            }
+
+            body {
+                background-color: #0b0c10;
+                color: #c9d1d9;
                 font-family: "Roboto", sans-serif;
                 font-weight: 300;
                 font-style: normal;
+                overflow-x: hidden;
+                scroll-behavior: smooth;
+            }
+
+            /* Scrollbar Styling */
+            ::-webkit-scrollbar {
+                width: 8px;
+            }
+            ::-webkit-scrollbar-track {
+                background: #0b0c10;
+            }
+            ::-webkit-scrollbar-thumb {
+                background: rgba(255, 255, 255, 0.1);
+                border-radius: 4px;
+            }
+            ::-webkit-scrollbar-thumb:hover {
+                background: var(--accent-color);
+            }
+
+            .text-accent {
+                color: var(--accent-color) !important;
+            }
+
+            .text-purple {
+                color: var(--accent-purple) !important;
+            }
+
+            .bg-accent-subtle {
+                background-color: rgba(13, 253, 255, 0.08) !important;
+            }
+
+            .bg-purple-subtle {
+                background-color: rgba(157, 78, 221, 0.08) !important;
+            }
+
+            /* Buttons */
+            .btn-accent {
+                background-color: var(--accent-color);
+                color: #121212;
+                border: 1px solid var(--accent-color);
+                font-weight: 500;
+                transition: all 0.25s ease;
+            }
+
+            .btn-accent:hover {
+                background-color: transparent;
+                color: var(--accent-color);
+                box-shadow: 0 0 15px rgba(13, 253, 255, 0.35);
+            }
+
+            .btn-outline-accent {
+                border-color: rgba(13, 253, 255, 0.3);
+                color: var(--accent-color);
+                transition: all 0.25s ease;
+            }
+
+            .btn-outline-accent:hover {
+                background-color: var(--accent-color);
+                color: #121212;
+                border-color: var(--accent-color);
+                box-shadow: 0 0 12px rgba(13, 253, 255, 0.3);
+            }
+
+            /* Glass Navbar */
+            .glass-navbar {
+                background: rgba(11, 12, 16, 0.8);
+                backdrop-filter: blur(16px);
+                -webkit-backdrop-filter: blur(16px);
+                border-bottom: 1px solid var(--border-glass);
+                z-index: 1050;
+                transition: background 0.3s ease;
+            }
+
+            .nav-link {
+                color: #8b949e;
+                font-weight: 400;
+                transition: color 0.25s ease;
+            }
+
+            .nav-link:hover, .nav-link.active {
+                color: var(--accent-color) !important;
+            }
+
+            /* Hero Section */
+            .hero-section {
+                position: relative;
+                padding: 140px 0 80px 0;
+                background: radial-gradient(circle at 80% 20%, rgba(157, 78, 221, 0.12), transparent 45%),
+                            radial-gradient(circle at 15% 80%, rgba(13, 253, 255, 0.08), transparent 45%);
+            }
+
+            .hero-title {
+                font-size: 3.5rem;
+                font-weight: 800;
+                letter-spacing: -1px;
+                line-height: 1.15;
+            }
+
+            .hero-glow-text {
+                background: linear-gradient(135deg, #ffffff 40%, var(--accent-color) 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+
+            .hero-subtitle {
+                font-size: 1.2rem;
+                color: #8b949e;
+                line-height: 1.6;
+            }
+
+            /* Custom Premium Cards */
+            .custom-card {
+                background: var(--bg-glass);
+                border: 1px solid var(--border-glass);
+                border-radius: 18px;
+                backdrop-filter: blur(12px);
+                -webkit-backdrop-filter: blur(12px);
+                transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            }
+
+            .custom-card:hover {
+                transform: translateY(-6px);
+                border-color: rgba(13, 253, 255, 0.4);
+                box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4), 
+                            0 0 20px rgba(13, 253, 255, 0.08);
+            }
+
+            .card-icon {
+                font-size: 1.7rem;
+                color: var(--accent-color);
+                background: rgba(13, 253, 255, 0.05);
+                width: 48px;
+                height: 48px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 12px;
+                border: 1px solid rgba(13, 253, 255, 0.15);
+                transition: all 0.3s ease;
+            }
+
+            .custom-card:hover .card-icon {
+                background: var(--accent-color);
+                color: #121212;
+                transform: scale(1.05) rotate(5deg);
+                box-shadow: 0 0 10px rgba(13, 253, 255, 0.35);
+            }
+
+            /* Interactive Terminal Window */
+            .terminal-window {
+                background: #0d0f12;
+                border: 1px solid rgba(255, 255, 255, 0.1);
+                border-radius: 14px;
+                font-family: 'Fira Code', 'Courier New', Courier, monospace;
+                overflow: hidden;
+                box-shadow: 0 20px 40px rgba(0, 0, 0, 0.55);
+            }
+
+            .terminal-header {
+                background: #161b22;
+                padding: 12px 18px;
+                display: flex;
+                align-items: center;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            }
+
+            .terminal-dot {
+                width: 12px;
+                height: 12px;
+                border-radius: 50%;
+                margin-right: 8px;
+            }
+
+            .dot-red { background: #ff5f56; }
+            .dot-yellow { background: #ffbd2e; }
+            .dot-green { background: #27c93f; }
+
+            .terminal-body {
+                padding: 24px;
+                color: #c9d1d9;
+                font-size: 0.85rem;
+                line-height: 1.7;
+                min-height: 275px;
+            }
+
+            .terminal-cmd-btn {
+                font-size: 0.75rem;
+                padding: 3px 10px;
+                border-radius: 20px;
+                font-family: 'Fira Code', monospace;
+            }
+
+            /* Section Titles */
+            .section-title {
+                font-size: 2.25rem;
+                font-weight: 700;
+                position: relative;
+                padding-bottom: 12px;
+                color: #ffffff;
+            }
+
+            .section-title::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 60px;
+                height: 4px;
+                background: linear-gradient(90deg, var(--accent-color), var(--accent-purple));
+                border-radius: 2px;
+            }
+
+            /* Quick Stats Component */
+            .stat-pill {
+                background: rgba(255, 255, 255, 0.02);
+                border: 1px solid rgba(255, 255, 255, 0.05);
+                border-radius: 14px;
+                padding: 16px;
+                transition: all 0.25s ease;
+            }
+
+            .stat-pill:hover {
+                background: rgba(255, 255, 255, 0.04);
+                border-color: rgba(255, 255, 255, 0.1);
+                transform: translateX(4px);
+            }
+
+            /* Filter Buttons */
+            .btn-filter {
+                background: rgba(255, 255, 255, 0.03);
+                border: 1px solid rgba(255, 255, 255, 0.06);
+                color: #8b949e;
+                padding: 6px 16px;
+                border-radius: 20px;
+                transition: all 0.25s ease;
+                font-size: 0.85rem;
+            }
+
+            .btn-filter:hover {
+                border-color: var(--accent-color);
+                color: var(--accent-color);
+            }
+
+            .btn-filter.active {
+                background: rgba(13, 253, 255, 0.12);
+                border-color: var(--accent-color);
+                color: var(--accent-color);
+                box-shadow: 0 0 10px rgba(13, 253, 255, 0.15);
+            }
+
+            /* Skills Badge System */
+            .skill-card {
+                background: rgba(255, 255, 255, 0.02);
+                border: 1px solid rgba(255, 255, 255, 0.05);
+                transition: all 0.25s ease;
+            }
+            .skill-card:hover {
+                background: rgba(13, 253, 255, 0.03);
+                border-color: rgba(13, 253, 255, 0.2);
+                transform: scale(1.03);
+            }
+
+            /* Hover Animation Utilities */
+            .hover-arrow i {
+                transition: transform 0.2s ease;
+            }
+            .hover-arrow:hover i {
+                transform: translateX(4px);
+            }
+
+            /* Utilities */
+            .roboto-text {
+                font-family: "Roboto", sans-serif;
+            }
+
+            @media (max-width: 768px) {
+                .hero-title {
+                    font-size: 2.5rem;
+                }
+                .hero-section {
+                    padding: 110px 0 50px 0;
+                }
+                .terminal-window {
+                    margin-top: 30px;
+                }
             }
         </style>
+    </head>
+    <body class="roboto-text">
+        <!-- Floating Glass Navbar -->
+        <nav class="navbar navbar-expand-lg fixed-top glass-navbar py-3">
+            <div class="container">
+                <a class="navbar-brand fw-bold text-white d-flex align-items-center gap-2" href="#">
+                    <i class="bi bi-terminal text-accent fs-4"></i>
+                    <span>thinksideways</span>
+                </a>
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto gap-2 mt-3 mt-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link px-3 active" href="#projects">Repositories</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link px-3" href="#skills">Skills</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <header class="hero-section d-flex align-items-center">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-12 col-lg-6">
+                        <div class="d-inline-flex align-items-center gap-2 px-3 py-1 rounded-pill bg-accent-subtle text-accent border border-accent-subtle mb-3 small fw-semibold">
+                            <i class="bi bi-check-circle-fill"></i> Available for Academic & Pro Projects
+                        </div>
+                        <h1 class="hero-title text-white mb-3">
+                            Welcome to my <br><span class="hero-glow-text">GitHub Space!</span>
+                        </h1>
+                        <p class="hero-subtitle mb-4">
+                            Hi, I'm <strong class="text-white">Sam K</strong> (aka <strong>thinksideways</strong>). <br>Software developer and DevOps engineer since 2018.
+                        </p>
+                        <div class="d-flex flex-wrap gap-3">
+                            <a href="#projects" class="btn btn-accent px-4 py-2">
+                                <i class="bi bi-grid-fill me-2"></i> View Repositories
+                            </a>
+                            <a href="https://github.com/thinksideways" target="_blank" class="btn btn-outline-light px-4 py-2">
+                                <i class="bi bi-github me-2"></i> GitHub Profile
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Interactive Terminal Simulation -->
+                    <div class="col-12 col-lg-6">
+                        <div class="terminal-window mt-4 mt-lg-0">
+                            <div class="terminal-header d-flex justify-content-between align-items-center">
+                                <div class="d-flex">
+                                    <span class="terminal-dot dot-red"></span>
+                                    <span class="terminal-dot dot-yellow"></span>
+                                    <span class="terminal-dot dot-green"></span>
+                                </div>
+                                <div class="d-flex gap-1" id="terminal-triggers">
+                                    <button class="btn btn-sm btn-accent terminal-cmd-btn py-0" data-action="about">--about</button>
+                                    <button class="btn btn-sm btn-outline-secondary terminal-cmd-btn py-0" data-action="goals">--goals</button>
+                                    <button class="btn btn-sm btn-outline-secondary terminal-cmd-btn py-0" data-action="status">--status</button>
+                                </div>
+                            </div>
+                            <div class="terminal-body">
+                                <div id="terminal-prompt" class="mb-3 text-secondary">
+                                    <span class="text-secondary">$</span> ➜ 🔥¯\_(ツ)_/¯🔥 echo $ABOUT
+                                </div>
+                                <div id="terminal-response" class="text-white-50">
+                                    > <span class="text-accent">About Sam</span><br>
+                                    > Sam K is a versatile DevOps Engineer & Software Developer.<br>
+                                    > • He started building custom splash pages & property IT network dashboards for Hotel WiFi in 2018.<br>
+                                    > • In 2022 he transitioned to DevOps and applications support for over 20 global Salesforce Commerce Cloud stores.<br>
+                                    > • In late 2025 he decided to pursue a degree in software development.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <!-- Repositories Grid Section (Full Row) -->
+            <section id="projects" class="py-5 border-top border-secondary-subtle" style="background-color: rgba(0,0,0,0.15);">
+                <div class="container py-4">
+                    <div class="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center mb-4 gap-3">
+                        <div>
+                            <h2 class="section-title mb-2">Featured Repositories</h2>
+                            <p class="text-body-secondary small mb-0">Explore open-source apps, scripting summaries, and projects.</p>
+                        </div>
+                        <div>
+                            <a href="https://github.com/thinksideways" target="_blank" class="btn btn-sm btn-outline-accent text-nowrap">
+                                <i class="bi bi-github me-1"></i> View All Repositories
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Filter Control Row -->
+                    <div class="row g-3 mb-4">
+                        <div class="col-12 col-md-7 d-flex flex-wrap gap-2 align-items-center" id="filter-buttons">
+                            <button class="btn btn-filter active" data-filter="all">All Ecosystems</button>
+                            <button class="btn btn-filter" data-filter="flutter">Flutter Apps</button>
+                            <button class="btn btn-filter" data-filter="apps-script">Google Apps Script</button>
+                        </div>
+                        <div class="col-12 col-md-5">
+                            <div class="input-group">
+                                <span class="input-group-text bg-dark border-secondary-subtle text-muted"><i class="bi bi-search"></i></span>
+                                <input type="text" class="form-control bg-dark border-secondary-subtle text-white search-bar" placeholder="Search projects by title, description or tag...">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Repositories Grid Container -->
+                    <div class="row" id="repos-container">
+                        <!-- Loaded dynamically via jQuery -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Skills & Tooling Section -->
+            <section id="skills" class="py-5 border-top border-secondary-subtle">
+                <div class="container py-4">
+                    <div class="row">
+                        <!-- Left Column: Core Tech Stack -->
+                        <div class="col-12 col-lg-7 mb-5 mb-lg-0">
+                            <div class="mb-5">
+                                <h2 class="section-title mb-2">Core Tech Stack</h2>
+                                <p class="text-body-secondary small">Primary technologies, scripts, and devops methodologies.</p>
+                            </div>
+                            <div class="row" id="skills-container">
+                                <!-- Loaded dynamically via jQuery -->
+                            </div>
+                        </div>
+
+                        <!-- Right Column: Sam's Index Details -->
+                        <div class="col-12 col-lg-5 ps-lg-5">
+                            <div class="card custom-card p-4">
+                                <h4 class="text-white fw-bold mb-4 d-flex align-items-center gap-2">
+                                    <i class="bi bi-info-circle text-accent"></i> Sam's Index Details
+                                </h4>
+                                <div class="d-flex flex-column gap-3">
+                                    <div class="stat-pill d-flex justify-content-between align-items-center">
+                                        <div class="d-flex align-items-center gap-3">
+                                            <i class="bi bi-clock-history text-accent fs-4"></i>
+                                            <div>
+                                                <div class="text-white fw-semibold small">Development Since</div>
+                                                <div class="text-body-secondary small">WiFi Splash Portals & Bash</div>
+                                            </div>
+                                        </div>
+                                        <span class="badge bg-accent-subtle text-accent px-3 py-2 fs-6">2018</span>
+                                    </div>
+                                    <div class="stat-pill d-flex justify-content-between align-items-center">
+                                        <div class="d-flex align-items-center gap-3">
+                                            <i class="bi bi-infinity text-purple fs-4"></i>
+                                            <div>
+                                                <div class="text-white fw-semibold small">Salesforce Commerce DevOps</div>
+                                                <div class="text-body-secondary small">Global Support Architecture</div>
+                                            </div>
+                                        </div>
+                                        <span class="badge bg-purple-subtle text-purple px-3 py-2 fs-6">20+ Stores</span>
+                                    </div>
+                                    <div class="stat-pill d-flex justify-content-between align-items-center">
+                                        <div class="d-flex align-items-center gap-3">
+                                            <i class="bi bi-gemini text-accent fs-4"></i>
+                                            <div>
+                                                <div class="text-white fw-semibold small">Preferred Toolkit</div>
+                                                <div class="text-body-secondary small">C#, Flutter, Gemini CLI & Agents</div>
+                                            </div>
+                                        </div>
+                                        <span class="badge bg-accent-subtle text-accent px-3 py-2 fs-6">AI Synergy</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="py-5 border-top border-secondary-subtle bg-black text-center text-body-secondary small">
+            <div class="container">
+                <p class="mb-2">Built with hand-crafted elements, jQuery, and Bootstrap 5.3.8.</p>
+                <p class="mb-4">Designed for AI Assisted Coding & DevOps synergy.</p>
+                <div class="d-flex justify-content-center gap-3">
+                    <a href="https://github.com/thinksideways" target="_blank" class="text-body-secondary text-decoration-none hover-arrow">
+                        <i class="bi bi-github"></i> thinksideways
+                    </a>
+                    <span>•</span>
+                    <a href="#projects" class="text-body-secondary text-decoration-none">
+                        Repositories
+                    </a>
+                </div>
+                <p class="mt-4 mb-0 text-muted small">&copy; 2026 thinksideways. All rights reserved.</p>
+            </div>
+        </footer>
+
+        <!-- Primary Portfolio Data Configuration -->
+        <script>
+            // Primary Portfolio Data Configuration
+            // Edit this data object below to add, remove, or modify items!
+            const PORTFOLIO_DATA = {
+                bio: {
+                    name: "Sam K",
+                    username: "thinksideways",
+                    githubUrl: "https://github.com/thinksideways",
+                    title: "DevOps Engineer & Software Developer"
+                },
+                repositories: [
+                    {
+                        title: "Plaited",
+                        description: "An AI-enabled meal planner application built using Flutter and Dart. Automates healthy dietary choices with intelligent calendar scheduling.",
+                        url: "https://github.com/thinksideways/ai-meal-planner",
+                        tags: ["Flutter", "Dart", "AI", "Mobile"],
+                        icon: "bi-calendar-heart",
+                        category: "flutter"
+                    },
+                    {
+                        title: "Food Tracker Summary Apps Script",
+                        description: "A Google Apps Script enabled food tracker integrated seamlessly with Google Sheets and Google Calendar to log and visualize macros.",
+                        url: "https://github.com/thinksideways/food-tracker-summary-apps-script",
+                        tags: ["Apps Script", "Google Sheets", "Google Calendar", "Automation"],
+                        icon: "bi-table",
+                        category: "apps-script"
+                    }
+                ],
+                skills: [
+                    { name: "C# & .NET", icon: "bi-braces", category: "Languages & Frameworks" },
+                    { name: "Flutter & Dart", icon: "bi-phone", category: "Languages & Frameworks" },
+                    { name: "Python", icon: "bi-code", category: "Languages & Frameworks" },
+                    { name: "jQuery & PHP", icon: "bi-code-slash", category: "Languages & Frameworks" },
+                    { name: "Salesforce Commerce Cloud", icon: "bi-cloud-fill", category: "DevOps & Cloud" },
+                    { name: "DevOps & CI/CD", icon: "bi-infinity", category: "DevOps & Cloud" },
+                    { name: "Google Sheets & Excel", icon: "bi-grid-3x3-gap", category: "Automation & Tools" },
+                    { name: "Bash Scripting", icon: "bi-terminal-fill", category: "Automation & Tools" }
+                ]
+            };
+
+            // Interactive Terminal CLI Simulator Data
+            const TERMINAL_OUTPUTS = {
+                about: {
+                    cmd: `➜ 🔥¯\_(ツ)_/¯🔥 echo $ABOUT`,
+                    res: `> Sam K is a versatile DevOps Engineer & Software Developer.<br>` +
+                         `> • He started building custom splash pages & property IT network dashboards for Hotel WiFi in 2018.<br>` +
+                         `> • In 2022 he transitioned to DevOps and applications support for over 20 global Salesforce Commerce Cloud stores.<br>` +
+                         `> • In late 2025 he decided to pursue a degree in software development.`
+                },
+                goals: {
+                    cmd: `➜ 🔥¯\_(ツ)_/¯🔥 echo $GOALS`,
+                    res: `> Active Summer Targets:<br>` +
+                         `> • <b>Spreadsheet Mastery</b>: Drastically improve speed, muscle memory, and hotkeys in Sheets & Excel.<br>` +
+                         `> • <b>Academic Excellence</b>: Execute high-quality homework repositories and core algorithmic concepts.<br>` +
+                         `> • <b>DevOps Expansion</b>: Leverage advanced shell scripts and Gemini AI automation loops.`
+                },
+                status: {
+                    cmd: `➜ 🔥¯\_(ツ)_/¯🔥 echo $HOBBIES`,
+                    res: `> <span class="text-accent">Hobbies and Interests:</span><br>` +
+                         `> * Gym and Fitness<br>` +
+                         `> * Pianos and Ukuleles<br>` +
+                         `> * Sci-fi and fantasy novels<br>` +
+                         `> * My goldendoodle, Rawry<br>` +
+                         `> * Building cool things on my Mac`
+                }
+            };
+
+            // DOM Ready Handler
+            $(document).ready(function() {
+                // 1. Render Repositories
+                function renderRepositories(repos) {
+                    const $container = $('#repos-container');
+                    $container.empty();
+                    
+                    if (repos.length === 0) {
+                        $container.html(`
+                            <div class="col-12 text-center py-5">
+                                <i class="bi bi-search text-muted fs-1 mb-3 d-block"></i>
+                                <p class="text-muted">No repositories match your search or filter criteria.</p>
+                            </div>
+                        `);
+                        return;
+                    }
+                    
+                    repos.forEach(repo => {
+                        const tagBadges = repo.tags.map(t => `<span class="badge bg-dark-subtle text-accent border border-accent-subtle me-1 mb-1" style="font-size: 0.75rem;">${t}</span>`).join('');
+                        
+                        $container.append(`
+                            <div class="col-12 col-md-6 mb-4">
+                                <div class="card custom-card h-100">
+                                    <div class="card-body d-flex flex-column justify-content-between p-4">
+                                        <div>
+                                            <div class="d-flex justify-content-between align-items-start">
+                                                <div class="card-icon">
+                                                    <i class="bi ${repo.icon}"></i>
+                                                </div>
+                                                <a href="${repo.url}" target="_blank" class="btn btn-outline-accent btn-sm rounded-circle d-flex align-items-center justify-content-center" style="width: 32px; height: 32px;" title="View Repository">
+                                                    <i class="bi bi-box-arrow-up-right"></i>
+                                                </a>
+                                            </div>
+                                            <h4 class="card-title fw-bold mt-3 text-white" style="font-size: 1.25rem;">${repo.title}</h4>
+                                            <p class="card-text text-body-secondary mt-2 fs-6 lh-base">${repo.description}</p>
+                                        </div>
+                                        <div class="mt-4">
+                                            <div class="d-flex flex-wrap mb-3">
+                                                ${tagBadges}
+                                            </div>
+                                            <div class="d-flex justify-content-between align-items-center pt-3 border-top border-secondary-subtle">
+                                                <span class="text-body-secondary small"><i class="bi bi-github me-1 text-accent"></i> thinksideways</span>
+                                                <a href="${repo.url}" target="_blank" class="text-accent text-decoration-none fw-semibold small hover-arrow">
+                                                    Explore Repo <i class="bi bi-arrow-right-short"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        `);
+                    });
+                }
+
+                // Initial Repo Render
+                renderRepositories(PORTFOLIO_DATA.repositories);
+
+                // 2. Render Skills
+                function renderSkills() {
+                    const $container = $('#skills-container');
+                    $container.empty();
+                    
+                    // Group skills by category
+                    const categorized = {};
+                    PORTFOLIO_DATA.skills.forEach(skill => {
+                        if (!categorized[skill.category]) {
+                            categorized[skill.category] = [];
+                        }
+                        categorized[skill.category].push(skill);
+                    });
+
+                    Object.keys(categorized).forEach(cat => {
+                        const skillsHtml = categorized[cat].map(s => `
+                            <div class="col-6 col-md-3">
+                                <div class="skill-card p-3 rounded-3 text-center border">
+                                    <i class="bi ${s.icon} text-accent mb-2 d-block fs-3"></i>
+                                    <span class="text-white fw-semibold small d-block">${s.name}</span>
+                                </div>
+                            </div>
+                        `).join('');
+
+                        $container.append(`
+                            <div class="col-12 mb-5">
+                                <h5 class="text-white-50 fw-bold mb-3" style="font-size: 0.95rem; text-transform: uppercase; letter-spacing: 1px;">
+                                    <i class="bi bi-tag text-purple me-2"></i> ${cat}
+                                </h5>
+                                <div class="row g-3">
+                                    ${skillsHtml}
+                                </div>
+                            </div>
+                        `);
+                    });
+                }
+
+                // Render Skills
+                renderSkills();
+
+                // 3. Setup Search and Filtering for Repositories
+                function applyFilters() {
+                    const activeFilter = $('.btn-filter.active').data('filter');
+                    const searchQuery = $('.search-bar').val().toLowerCase();
+                    
+                    const filtered = PORTFOLIO_DATA.repositories.filter(repo => {
+                        const matchesCategory = activeFilter === 'all' || repo.category === activeFilter;
+                        const matchesSearch = repo.title.toLowerCase().includes(searchQuery) || 
+                                              repo.description.toLowerCase().includes(searchQuery) ||
+                                              repo.tags.some(tag => tag.toLowerCase().includes(searchQuery));
+                        return matchesCategory && matchesSearch;
+                    });
+                    
+                    renderRepositories(filtered);
+                }
+
+                $(document).on('click', '.btn-filter', function() {
+                    $('.btn-filter').removeClass('active');
+                    $(this).addClass('active');
+                    applyFilters();
+                });
+
+                $(document).on('input', '.search-bar', function() {
+                    applyFilters();
+                });
+
+                // 4. Interactive Terminal Triggers
+                $(document).on('click', '.terminal-cmd-btn', function() {
+                    $('.terminal-cmd-btn').removeClass('btn-accent').addClass('btn-outline-secondary');
+                    $(this).removeClass('btn-outline-secondary').addClass('btn-accent');
+                    
+                    const action = $(this).data('action');
+                    const output = TERMINAL_OUTPUTS[action];
+                    
+                    if (output) {
+                        $('#terminal-prompt').html(`<span class="text-secondary">$</span> ${output.cmd}`);
+                        $('#terminal-response').fadeOut(100, function() {
+                            $(this).html(output.res).fadeIn(150);
+                        });
+                    }
+                });
+
+                // Simple active state listener for scrolling navbar elements
+                $(window).on('scroll', function() {
+                    const scrollPos = $(window).scrollTop() + 100;
+                    $('section').each(function() {
+                        const top = $(this).offset().top;
+                        const bottom = top + $(this).outerHeight();
+                        const id = $(this).attr('id');
+                        
+                        if (scrollPos >= top && scrollPos <= bottom) {
+                            $('.navbar-nav .nav-link').removeClass('active');
+                            $(`.navbar-nav .nav-link[href="#${id}"]`).addClass('active');
+                        }
+                    });
+                });
+            });
+        </script>
+        <!-- Bootstrap JS Bundle -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     </body>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </html>
