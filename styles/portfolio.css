@@ -223,20 +223,7 @@ body {
     border-radius: 2px;
 }
 
-/* Quick Stats Component */
-.stat-pill {
-    background: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    border-radius: 14px;
-    padding: 16px;
-    transition: all 0.25s ease;
-}
 
-.stat-pill:hover {
-    background: rgba(255, 255, 255, 0.04);
-    border-color: rgba(255, 255, 255, 0.1);
-    transform: translateX(4px);
-}
 
 /* Filter Buttons */
 .btn-filter {

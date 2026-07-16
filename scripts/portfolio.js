@@ -26,14 +26,30 @@ const PORTFOLIO_DATA = {
         }
     ],
     skills: [
-        { name: "C# & .NET", icon: "bi-braces", category: "Languages & Frameworks" },
-        { name: "Flutter & Dart", icon: "bi-phone", category: "Languages & Frameworks" },
-        { name: "Python", icon: "bi-code", category: "Languages & Frameworks" },
-        { name: "jQuery & PHP", icon: "bi-code-slash", category: "Languages & Frameworks" },
-        { name: "Salesforce Commerce Cloud", icon: "bi-cloud-fill", category: "DevOps & Cloud" },
-        { name: "DevOps & CI/CD", icon: "bi-infinity", category: "DevOps & Cloud" },
-        { name: "Google Sheets & Excel", icon: "bi-grid-3x3-gap", category: "Automation & Tools" },
-        { name: "Bash Scripting", icon: "bi-terminal-fill", category: "Automation & Tools" }
+        // Languages
+        { name: "JavaScript (ES6+)", icon: "bi-code-slash", category: "Languages" },
+        { name: "Node.js", icon: "bi-hexagon-fill", category: "Languages" },
+        { name: "Python", icon: "bi-code", category: "Languages" },
+        { name: "PHP", icon: "bi-code-slash", category: "Languages" },
+        { name: ".NET / C#", icon: "bi-braces", category: "Languages" },
+        { name: "Java / Spring Boot", icon: "bi-cup-hot-fill", category: "Languages" },
+        { name: "SQL", icon: "bi-database-fill", category: "Languages" },
+        { name: "HTML5 / CSS3", icon: "bi-filetype-html", category: "Languages" },
+        // Architecture & Cloud
+        { name: "Microservices", icon: "bi-cpu", category: "Architecture & Cloud" },
+        { name: "REST APIs", icon: "bi-hdd-network-fill", category: "Architecture & Cloud" },
+        { name: "Domain-Driven Design", icon: "bi-bezier2", category: "Architecture & Cloud" },
+        { name: "MVC", icon: "bi-layout-three-columns", category: "Architecture & Cloud" },
+        { name: "Cloud Integrations", icon: "bi-cloud-fill", category: "Architecture & Cloud" },
+        // DevOps & Containers
+        { name: "Docker", icon: "bi-box-seam-fill", category: "DevOps & Containers" },
+        { name: "CI/CD Pipelines", icon: "bi-infinity", category: "DevOps & Containers" },
+        { name: "Git / GitLab / Bitbucket", icon: "bi-git", category: "DevOps & Containers" },
+        { name: "Linux Administration", icon: "bi-terminal-fill", category: "DevOps & Containers" },
+        // Integrations & Tools
+        { name: "SFCC SFRA", icon: "bi-shop", category: "Integrations & Tools" },
+        { name: "Jira / Confluence", icon: "bi-kanban-fill", category: "Integrations & Tools" },
+        { name: "Middleware Integrations", icon: "bi-arrow-left-right", category: "Integrations & Tools" }
     ]
 };
 
