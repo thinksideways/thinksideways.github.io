@@ -1,0 +1,299 @@
+:root {
+    --accent-color: #0dfdff;
+    --accent-purple: #9d4edd;
+    --bg-glass: rgba(18, 20, 24, 0.65);
+    --border-glass: rgba(255, 255, 255, 0.08);
+}
+
+body {
+    background-color: #0b0c10;
+    color: #c9d1d9;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #0b0c10;
+}
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-color);
+}
+
+.text-accent {
+    color: var(--accent-color) !important;
+}
+
+.text-purple {
+    color: var(--accent-purple) !important;
+}
+
+.bg-accent-subtle {
+    background-color: rgba(13, 253, 255, 0.08) !important;
+}
+
+.bg-purple-subtle {
+    background-color: rgba(157, 78, 221, 0.08) !important;
+}
+
+/* Buttons */
+.btn-accent {
+    background-color: var(--accent-color);
+    color: #121212;
+    border: 1px solid var(--accent-color);
+    font-weight: 500;
+    transition: all 0.25s ease;
+}
+
+.btn-accent:hover {
+    background-color: transparent;
+    color: var(--accent-color);
+    box-shadow: 0 0 15px rgba(13, 253, 255, 0.35);
+}
+
+.btn-outline-accent {
+    border-color: rgba(13, 253, 255, 0.3);
+    color: var(--accent-color);
+    transition: all 0.25s ease;
+}
+
+.btn-outline-accent:hover {
+    background-color: var(--accent-color);
+    color: #121212;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 12px rgba(13, 253, 255, 0.3);
+}
+
+/* Glass Navbar */
+.glass-navbar {
+    background: rgba(11, 12, 16, 0.8);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--border-glass);
+    z-index: 1050;
+    transition: background 0.3s ease;
+}
+
+.nav-link {
+    color: #8b949e;
+    font-weight: 400;
+    transition: color 0.25s ease;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--accent-color) !important;
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    padding: 140px 0 80px 0;
+    background: radial-gradient(circle at 80% 20%, rgba(157, 78, 221, 0.12), transparent 45%),
+                radial-gradient(circle at 15% 80%, rgba(13, 253, 255, 0.08), transparent 45%);
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+    line-height: 1.15;
+}
+
+.hero-glow-text {
+    background: linear-gradient(135deg, #ffffff 40%, var(--accent-color) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    color: #8b949e;
+    line-height: 1.6;
+}
+
+/* Custom Premium Cards */
+.custom-card {
+    background: var(--bg-glass);
+    border: 1px solid var(--border-glass);
+    border-radius: 18px;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.custom-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(13, 253, 255, 0.4);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4), 
+                0 0 20px rgba(13, 253, 255, 0.08);
+}
+
+.card-icon {
+    font-size: 1.7rem;
+    color: var(--accent-color);
+    background: rgba(13, 253, 255, 0.05);
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    border: 1px solid rgba(13, 253, 255, 0.15);
+    transition: all 0.3s ease;
+}
+
+.custom-card:hover .card-icon {
+    background: var(--accent-color);
+    color: #121212;
+    transform: scale(1.05) rotate(5deg);
+    box-shadow: 0 0 10px rgba(13, 253, 255, 0.35);
+}
+
+/* Interactive Terminal Window */
+.terminal-window {
+    background: #0d0f12;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 14px;
+    font-family: 'Fira Code', 'Courier New', Courier, monospace;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.55);
+}
+
+.terminal-header {
+    background: #161b22;
+    padding: 12px 18px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.terminal-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.dot-red { background: #ff5f56; }
+.dot-yellow { background: #ffbd2e; }
+.dot-green { background: #27c93f; }
+
+.terminal-body {
+    padding: 24px;
+    color: #c9d1d9;
+    font-size: 0.85rem;
+    line-height: 1.7;
+    min-height: 275px;
+}
+
+.terminal-cmd-btn {
+    font-size: 0.75rem;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-family: 'Fira Code', monospace;
+}
+
+/* Section Titles */
+.section-title {
+    font-size: 2.25rem;
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 12px;
+    color: #ffffff;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--accent-color), var(--accent-purple));
+    border-radius: 2px;
+}
+
+/* Quick Stats Component */
+.stat-pill {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 14px;
+    padding: 16px;
+    transition: all 0.25s ease;
+}
+
+.stat-pill:hover {
+    background: rgba(255, 255, 255, 0.04);
+    border-color: rgba(255, 255, 255, 0.1);
+    transform: translateX(4px);
+}
+
+/* Filter Buttons */
+.btn-filter {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    color: #8b949e;
+    padding: 6px 16px;
+    border-radius: 20px;
+    transition: all 0.25s ease;
+    font-size: 0.85rem;
+}
+
+.btn-filter:hover {
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+}
+
+.btn-filter.active {
+    background: rgba(13, 253, 255, 0.12);
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+    box-shadow: 0 0 10px rgba(13, 253, 255, 0.15);
+}
+
+/* Skills Badge System */
+.skill-card {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.25s ease;
+}
+.skill-card:hover {
+    background: rgba(13, 253, 255, 0.03);
+    border-color: rgba(13, 253, 255, 0.2);
+    transform: scale(1.03);
+}
+
+/* Hover Animation Utilities */
+.hover-arrow i {
+    transition: transform 0.2s ease;
+}
+.hover-arrow:hover i {
+    transform: translateX(4px);
+}
+
+/* Utilities */
+.roboto-text {
+    font-family: "Roboto", sans-serif;
+}
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    .hero-section {
+        padding: 110px 0 50px 0;
+    }
+    .terminal-window {
+        margin-top: 30px;
+    }
+}
