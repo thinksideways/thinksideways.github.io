@@ -10,7 +10,7 @@ const PORTFOLIO_DATA = {
     repositories: [
         {
             title: "Plaited",
-            description: "An AI-enabled meal planner application built using Flutter and Dart. Automates healthy dietary choices with intelligent calendar scheduling.",
+            description: "An AI-enabled meal planner application built using Flutter and Dart. Enhances healthy eating habits by building meals to match your targeted macros with support for a wide variety of dietary preferences.",
             url: "https://github.com/thinksideways/ai-meal-planner",
             tags: ["Flutter", "Dart", "AI", "Mobile"],
             icon: "bi-calendar-heart",
@@ -57,17 +57,18 @@ const PORTFOLIO_DATA = {
 const TERMINAL_OUTPUTS = {
     about: {
         cmd: `➜ 🔥¯\_(ツ)_/¯🔥 echo $ABOUT`,
-        res: `> Sam K is a versatile DevOps Engineer & Software Developer.<br>` +
+        res: `> <span class="text-accent">About Sam:</span><br>` +
+             `> Sam K is a versatile DevOps Engineer & Software Developer.<br>` +
              `> • He started building custom splash pages & property IT network dashboards for Hotel WiFi in 2018.<br>` +
              `> • In 2022 he transitioned to DevOps and applications support for over 20 global Salesforce Commerce Cloud stores.<br>` +
              `> • In late 2025 he decided to pursue a degree in software development.`
     },
     goals: {
         cmd: `➜ 🔥¯\_(ツ)_/¯🔥 echo $GOALS`,
-        res: `> Active Summer Targets:<br>` +
+        res: `> <span class="text-accent">Active Summer Targets:</span><br>` +
              `> • <b>Spreadsheet Mastery</b>: Drastically improve speed, muscle memory, and hotkeys in Sheets & Excel.<br>` +
-             `> • <b>Academic Excellence</b>: Execute high-quality homework repositories and core algorithmic concepts.<br>` +
-             `> • <b>DevOps Expansion</b>: Leverage advanced shell scripts and Gemini AI automation loops.`
+             `> • <b>Academic Excellence</b>: Maintain 4.0 GPA and Dean's Honor List Status<br>` +
+             `> • <b>DevOps Expansion</b>: Leverage advanced shell scripts to enhance the deployment of my current Docker projects.`
     },
     status: {
         cmd: `➜ 🔥¯\_(ツ)_/¯🔥 echo $HOBBIES`,
